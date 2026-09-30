@@ -9,6 +9,18 @@ A Chrome extension that adds compact controls on the right side of the notificat
 
 Selection buttons replace the current selection using GitHub's existing checkboxes. Actions apply only to the current page, including when grouped by repository or filtered. Manually selected notifications are included when opening tabs. Existing selections remain checked after opening.
 
+## Screenshots
+
+These screenshots use the extension's actual controls in a local demo with entirely fictional notifications. No GitHub repository content, usernames, or avatars are included.
+
+Activity summaries beneath notification titles:
+
+![Activity summaries showing example commits, a force-push, and a review comment](docs/screenshots/activity-summaries.jpg)
+
+Bulk selection with the active Open in tabs button:
+
+![Three example notifications selected using the bulk action controls](docs/screenshots/bulk-actions.jpg)
+
 ## Install
 
 1. Open `chrome://extensions` in Chrome.
