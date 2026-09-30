@@ -1,0 +1,21 @@
+:root { color-scheme: light dark; font: 14px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: light-dark(#1f2328,#f0f6fc); background: light-dark(#f6f8fa,#0d1117); }
+* { box-sizing: border-box; }
+main { max-width: 640px; margin: 64px auto; padding: 0 24px; }
+h1 { font-size: 32px; line-height: 1.2; margin: 8px 0 16px; letter-spacing: -.6px; }
+h2 { font-size: 18px; margin-top: 0; }
+.eyebrow, .note { color: light-dark(#59636e,#9198a1); }
+.eyebrow { font-size: 12px; }
+section { background: light-dark(#fff,#161b22); padding: 24px; border: 1px solid light-dark(#d1d9e0,#3d444d); border-radius: 10px; margin: 24px 0; }
+a { color: light-dark(#0969da,#58a6ff); }
+li { margin-bottom: 8px; }
+ol { padding-left: 20px; }
+label { display: block; font-weight: 600; margin-bottom: 6px; }
+input { width: 100%; padding: 8px 12px; font: inherit; border: 1px solid light-dark(#818b98,#9198a1); border-radius: 6px; background: light-dark(#fff,#0d1117); color: inherit; }
+button { font: inherit; font-weight: 500; padding: 7px 14px; border-radius: 6px; border: 1px solid light-dark(#d1d9e0,#3d444d); cursor: pointer; }
+button[type=submit] { color: #fff; background: #1f883d; border-color: #1f883d; }
+button:disabled { opacity: .6; cursor: wait; }
+:is(input,button,a):focus-visible { outline: 2px solid #0969da; outline-offset: 3px; }
+.actions { display: flex; gap: 8px; }
+.note { font-size: 12px; }
+#status { margin-bottom: 0; }
+#status[data-error] { color: light-dark(#cf222e,#f85149); }

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Activity summaries · GitHub Notification Actions</title>
+  <link rel="stylesheet" href="options.css">
+  <script src="options.js" defer></script>
+</head>
+<body>
+<main>
+  <p class="eyebrow">GitHub Notification Actions</p>
+  <h1>Know what changed.</h1>
+  <p>See commits, force-pushes, comments, and reviews directly under notification titles. Your inbox stays unread until you open an item.</p>
+  <section aria-labelledby="connection-heading">
+    <h2 id="connection-heading">Connect GitHub</h2>
+    <p id="connection">Checking connection…</p>
+    <ol>
+      <li><a href="https://github.com/settings/tokens/new?description=GitHub%20Notification%20Actions&scopes=repo,notifications" target="_blank" rel="noopener noreferrer">Create a personal access token (classic)</a> with <code>repo</code> and <code>notifications</code> scopes. Set an expiration date.</li>
+      <li>If your organization uses SSO, authorize the token for it.</li>
+      <li>Paste it below. Fine-grained tokens do not support the notification read timestamps used here.</li>
+    </ol>
+    <form id="connect-form">
+      <label for="token">GitHub token</label>
+      <input id="token" type="password" autocomplete="off" spellcheck="false" required aria-describedby="token-help">
+      <p id="token-help" class="note">Saved only in this Chrome profile, outside webpage access. Never synced. The extension only reads GitHub data, although the classic repo scope also grants write access.</p>
+      <div class="actions"><button id="connect" type="submit">Connect GitHub</button><button id="disconnect" type="button" hidden>Disconnect</button></div>
+    </form>
+    <p id="status" role="status"></p>
+  </section>
+  <p class="note">Summaries describe observed activity, not a guaranteed notification trigger. A force-push is not automatically a rebase. Cached activity is reused for up to two minutes and retained only for this browser session; disconnecting clears the token and cache.</p>
+</main>
+</body>
+</html>

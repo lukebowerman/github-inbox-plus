@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Notification Actions",
+  "version": "1.1.0",
+  "description": "Bulk-select GitHub notifications and see recent activity beneath each issue or pull request title.",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "content.js",
+        "summaries.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage"
+  ],
+  "optional_host_permissions": [
+    "https://api.github.com/*"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "minimum_chrome_version": "123"
+}
